@@ -68,18 +68,12 @@
     <h2>Data analysis</h2>
   </hgroup>
   <article data-timings="">
-    <p>Built-in data sets (no upload needed):</p>
+    <p>Built-in data sets (no upload needed): attitude, ChickWeight, mtcars</p>
+
+<p>Data set provided by user: &quot;well formatted&quot; csv file</p>
 
 <ul>
-<li>attitude</li>
-<li>ChickWeight</li>
-<li>mtcars</li>
-</ul>
-
-<p>Data set provided by user:</p>
-
-<ul>
-<li>Upload &quot;well-formatted&quot; csv file</li>
+<li>Should not need transcoding or format changes, has header row, variables that are numeric or can be converted to numeric</li>
 <li>After uploading select data set &quot;uploaded data&quot;</li>
 </ul>
 
@@ -88,7 +82,7 @@
 <ul>
 <li>Data counts: row, cols, NA values</li>
 <li>Variable summaries: min, max, median, mean, quantiles, NA</li>
-<li>Plots: Histogram, box plot</li>
+<li>Plots: Histogram, box plot (non-numeric variables will be coerced to numeric in the plot)</li>
 </ul>
 
   </article>
@@ -105,8 +99,9 @@
 <p>Create linear regression model:</p>
 
 <ul>
-<li>Select dependent variable (response), independent variables (predictors) and any interactions.</li>
+<li>Select response variable (numerical), predictors (numerical or categorical) and any interactions.</li>
 <li>Indicate if regression is to be performed with or without intercept.</li>
+<li>Transformations and higher order (polynomial) predictors not supported.</li>
 </ul>
 
 <p>Model parameters, statistics and diagnostics:</p>
@@ -129,37 +124,6 @@
     <p>Formula: rating ~ complaints + privileges (in attitude data set)</p>
 
 <p><img src="assets/fig/unnamed-chunk-3-1.png" alt="plot of chunk unnamed-chunk-3"> <img src="assets/fig/unnamed-chunk-3-2.png" alt="plot of chunk unnamed-chunk-3"> <img src="assets/fig/unnamed-chunk-3-3.png" alt="plot of chunk unnamed-chunk-3"> <img src="assets/fig/unnamed-chunk-3-4.png" alt="plot of chunk unnamed-chunk-3"> <img src="assets/fig/unnamed-chunk-3-5.png" alt="plot of chunk unnamed-chunk-3"> </p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="class" id="id" style="background:;">
-  <hgroup>
-    <h2>Assumptions and limitations</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>Data sets:</p>
-
-<ul>
-<li>&quot;Well formatted&quot;: no transcoding or format changes needed</li>
-<li>Header row present, variables that are numeric or can be converted to numeric </li>
-</ul>
-
-<p>Data set plots:</p>
-
-<ul>
-<li>Boxplot: non-numeric variables will be coerced to numeric in the plot</li>
-</ul>
-
-<p>Linear regression model:</p>
-
-<ul>
-<li>Numeric response</li>
-<li>Numeric and categorical predictors</li>
-<li>No transformations</li>
-<li>No higher order (polynomial) predictors</li>
-</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -191,12 +155,6 @@
       <a href="#" target="_self" rel='tooltip' 
         data-slide=4 title='Sample plots'>
          4
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Assumptions and limitations'>
-         5
       </a>
     </li>
   </ul>

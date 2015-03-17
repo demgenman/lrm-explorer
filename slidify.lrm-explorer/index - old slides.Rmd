@@ -89,6 +89,22 @@ print(xtable(confint(fit.lm)), type="html")
 
 Model statistics: RSE, R squared, F-statistic, DF
 
+--- .class #id 
+
+## OLD - Assumptions and limitations
+
+Data sets:
+- "Well formatted": no transcoding or format changes needed
+- Header row present, variables that are numeric or can be converted to numeric 
+
+Data set plots:
+- Boxplot: non-numeric variables will be coerced to numeric in the plot
+
+Linear regression model:
+- Numeric response
+- Numeric and categorical predictors
+- No transformations
+- No higher order (polynomial) predictors
 
 
 
