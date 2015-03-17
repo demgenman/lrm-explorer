@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Linear Regression Model Explorer</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Linear Regression Model Explorer">
+  <meta name="author" content="demgenman at outlook com">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Linear Regression Model Explorer</h1>
+    <h2>Easily explore data and regression model features</h2>
+    <p>demgenman at outlook com<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Linear Regression Model Explorer</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Use LRM Explorer (LRME) to quickly explore a data set, apply a linear regression model and obtain various summary statistics.</p>
+
+<p>Features:</p>
+
+<ul>
+<li>Load and/or select data set</li>
+<li>View data summary</li>
+<li>Create linear regression model</li>
+<li>View model diagnostics </li>
+</ul>
+
+<p>Model formula: Response ~ Predictor(s) + Interaction(s) + Intercept</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Data analysis</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Built-in data sets (no upload needed):</p>
+
+<ul>
+<li>attitude</li>
+<li>ChickWeight</li>
+<li>mtcars</li>
+</ul>
+
+<p>Data set provided by user:</p>
+
+<ul>
+<li>Upload &quot;well-formatted&quot; csv file</li>
+<li>After uploading select data set &quot;uploaded data&quot;</li>
+</ul>
+
+<p>Statistics:</p>
+
+<ul>
+<li>Data counts: row, cols, NA values</li>
+<li>Variable summaries: min, max, median, mean, quantiles, NA</li>
+<li>Plots: Histogram, box plot</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Modeling</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Formula: Response ~ Predictor(s) + Interaction(s) + Intercept</p>
+
+<p>Create linear regression model:</p>
+
+<ul>
+<li>Select dependent variable (response), independent variables (predictors) and any interactions.</li>
+<li>Indicate if regression is to be performed with or without intercept.</li>
+</ul>
+
+<p>Model parameters, statistics and diagnostics:</p>
+
+<ul>
+<li>Coefficients and confidence intervals</li>
+<li>RSE, R squared, F-statistic, DF</li>
+<li>Plots: pairs, diagnostic plot grid, residuals to fitted, hat values</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Sample plots</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Formula: rating ~ complaints + privileges (in attitude data set)</p>
+
+<p><img src="assets/fig/unnamed-chunk-3-1.png" alt="plot of chunk unnamed-chunk-3"> <img src="assets/fig/unnamed-chunk-3-2.png" alt="plot of chunk unnamed-chunk-3"> <img src="assets/fig/unnamed-chunk-3-3.png" alt="plot of chunk unnamed-chunk-3"> <img src="assets/fig/unnamed-chunk-3-4.png" alt="plot of chunk unnamed-chunk-3"> <img src="assets/fig/unnamed-chunk-3-5.png" alt="plot of chunk unnamed-chunk-3"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Assumptions and limitations</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Data sets:</p>
+
+<ul>
+<li>&quot;Well formatted&quot;: no transcoding or format changes needed</li>
+<li>Header row present, variables that are numeric or can be converted to numeric </li>
+</ul>
+
+<p>Data set plots:</p>
+
+<ul>
+<li>Boxplot: non-numeric variables will be coerced to numeric in the plot</li>
+</ul>
+
+<p>Linear regression model:</p>
+
+<ul>
+<li>Numeric response</li>
+<li>Numeric and categorical predictors</li>
+<li>No transformations</li>
+<li>No higher order (polynomial) predictors</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Linear Regression Model Explorer'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Data analysis'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Modeling'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Sample plots'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Assumptions and limitations'>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

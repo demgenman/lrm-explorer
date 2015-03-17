@@ -1,0 +1,94 @@
+---
+title       : Linear Regression Model Explorer
+subtitle    : Easily explore data and regression model features  
+author      : demgenman@outlook.com
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## OLD - Data summary 
+
+Data counts:
+- Nr of observations (rows)
+- Nr of variables (columns)
+- Total nr of NA values in the data set
+
+Summary statistics:
+- Output of "summary()" function: min, max, median, mean, quantiles, NA counts
+
+Basic plots:
+- Histogram (of response variable)
+- Box plot (of response and selected predictors)
+
+--- .class #id 
+
+## OLD - Sample data summary 
+
+```{r echo=FALSE}
+data(attitude)
+```
+Nr of observations: `r dim(attitude)[1]`, 
+Nr of variables: `r dim(attitude)[2]`,
+Total NA values: `r sum(is.na(attitude))`.
+
+```{r echo=FALSE, results='asis'}
+library(xtable)
+print(xtable(summary(attitude[,c("rating", "complaints", "learning")])), type="html")
+```
+
+```{r echo=FALSE, fig.height=3.5, fig.width=4.5}
+hist(attitude$rating, main="Histogram of rating", xlab="rating")
+boxplot(attitude[,c("rating", "complaints", "learning")], plot=TRUE)
+
+```
+--- .class #id 
+
+## OLD - Modeling
+
+Formula: Response ~ Predictor(s) + Interaction(s) + Intercept
+
+Create model:
+- Select response (dependent) variable, predictor (independent) variables, any interactions.
+- Indicate if regression is to be performed with or without intercept.
+
+LRME automatically populates choices based on your selections.
+- Lists all variables found in the selected data set
+- Hides the selected response variable from the predictor choices
+- Generates choices for possible predictor interactions
+
+Notes:
+- All variable choices are reset when you select a different data set.
+- The default response variable is the first variable found in the data set.
+
+--- .class #id 
+
+## OLD - Regression model summary statistics
+
+```{r, echo=FALSE, results='asis'}
+data(attitude)
+fit.lm <- lm("rating ~ complaints + privileges", data = attitude)
+f <- as.character(formula(fit.lm))
+```
+
+Model summary
+- Formula: `r paste("Formula: ", f[2], f[1], f[3])`
+
+```{r, echo=FALSE, results='asis'}
+print(xtable(summary(fit.lm)), type="html")
+```
+
+Confidence interval
+```{r, echo=FALSE, results='asis'}
+print(xtable(confint(fit.lm)), type="html")
+```
+
+Model statistics: RSE, R squared, F-statistic, DF
+
+
+
+
